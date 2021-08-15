@@ -1,38 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: 0.5s ease-in-out;
+}
+
+/* Height of the page */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+}
+
+/* Header */
+.App header {
   display: flex;
+  background-color: #282c34;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  height: 10vh;
 }
 
-.App-link {
-  color: #61dafb;
+.App header h1 {
+  letter-spacing: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 1.5rem;
+  width: 30%;
+  min-height: 75%;
+  box-shadow: 1px 5px 10px 3px rgb(194, 194, 194);
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #282c34;
+}
+
+input[type="text"] {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+input[type="submit"] {
+  padding: 0.8rem;
+  background-color: #282c34;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.input-form {
+  justify-content: space-evenly;
+}
+
+.display-form {
+  display: flex;
+  color: #282c34;
+}
+
+.display-form p {
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.display-form p span {
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    margin: 1rem;
+    width: 40%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 575px) {
+  section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  form {
+    margin: 1.5rem;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App,
+  form,
+  input,
+  label,
+  .display-form p,
+  .display-form p span {
+    font-size: 90%;
+  }
+
+  form {
+    margin: 1.5rem 0;
+    width: 85%;
   }
 }
